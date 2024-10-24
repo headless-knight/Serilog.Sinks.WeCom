@@ -4,12 +4,28 @@
     <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>
+    <Authors>HeadlessKnight</Authors>
+    <Title>HeadlessKnight</Title>
+    <Description>一个用于向企业微信机器人发送消息的Serilog日志插槽</Description>
+    <Copyright>Copyright (c) 2024 HeadlessKnight</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>serilog;wecom;logging;event;webhook</PackageTags>
+    <PackageProjectUrl>https://github.com/headless-knight/Serilog.Sinks.WeCom</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/headless-knight/Serilog.Sinks.WeCom</RepositoryUrl>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Serilog" Version="4.1.0"/>
     <PackageReference Include="System.Net.Http.Json" Version="8.0.1" Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'netstandard2.0'))"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Logo.png" Pack="true" Visible="false" PackagePath=""/>
+    <None Include="..\README.md" Pack="true" Visible="false" PackagePath=""/>
   </ItemGroup>
 
 </Project>

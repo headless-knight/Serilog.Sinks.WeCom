@@ -20,6 +20,11 @@ public sealed class WeComSink : ILogEventSink, IDisposable, IAsyncDisposable
     private Task? _task;
     private int _disposeFlag;
 
+    /// <summary>
+    /// 构造方法
+    /// </summary>
+    /// <param name="client">Http客户端</param>
+    /// <param name="options">企业微信插槽选项</param>
     public WeComSink(HttpClient client, WeComSinkOptions options)
     {
         _client = client;
