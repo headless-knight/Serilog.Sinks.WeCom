@@ -16,6 +16,7 @@
     <RepositoryUrl>https://github.com/headless-knight/Serilog.Sinks.WeCom</RepositoryUrl>
     <PackageIcon>Logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
