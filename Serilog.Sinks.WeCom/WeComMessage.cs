@@ -7,18 +7,20 @@ internal sealed partial class WeComMessageContent : JsonSerializerContext;
 
 internal struct WeComMessage
 {
-    private static readonly WeComMarkdown DefaultMarkdown = new();
-
     // ReSharper disable once StringLiteralTypo
     [JsonPropertyName("msgtype")] public string MessageType { get; set; } = "markdown";
-    [JsonPropertyName("markdown")] public WeComMarkdown Markdown { get; set; } = DefaultMarkdown;
+    [JsonPropertyName("markdown")] public WeComMarkdown Markdown { get; set; }
 
     public WeComMessage()
     {
     }
 }
 
-internal class WeComMarkdown
+internal struct WeComMarkdown
 {
     [JsonPropertyName("content")] public string Content { get; set; } = string.Empty;
+
+    public WeComMarkdown()
+    {
+    }
 }

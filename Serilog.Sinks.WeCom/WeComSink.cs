@@ -157,7 +157,7 @@ public sealed class WeComSink : ILogEventSink, IDisposable, IAsyncDisposable
         // 发送至企业微信机器人
         await _client.PostAsJsonAsync(_options.Webhook, new WeComMessage
         {
-            Markdown =
+            Markdown = new WeComMarkdown
             {
                 Content = sb.ToString()
             }
